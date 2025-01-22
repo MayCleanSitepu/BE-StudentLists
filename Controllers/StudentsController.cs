@@ -33,8 +33,6 @@ namespace Kampus.Controllers
             return Ok(new { status = 200, message = "Success", data = students });
         }
 
-
-
         [HttpPost]
         public IActionResult AddStudent(AddStudentDto addStudentDto)
         {
@@ -57,5 +55,19 @@ namespace Kampus.Controllers
 
             return Ok(studentEntity);
         }
+
+
+        [HttpGet("{StudentId}")]
+        public IActionResult GetStudentsById(string StudentId)
+        {
+            var Student = dbContext.StudentDatas.Find(StudentId);
+
+            if(Student is null)
+            {
+                return NotFound();
+            }
+            return Ok(Student);
+        }
     }
+
 }

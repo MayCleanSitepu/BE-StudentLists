@@ -168,3 +168,4 @@ T:\MBKM\xtra\Kampus\Kampus\Kampus\obj\Debug\net8.0\refint\Kampus.dll
 T:\MBKM\xtra\Kampus\Kampus\Kampus\obj\Debug\net8.0\Kampus.pdb
 T:\MBKM\xtra\Kampus\Kampus\Kampus\obj\Debug\net8.0\Kampus.genruntimeconfig.cache
 T:\MBKM\xtra\Kampus\Kampus\Kampus\obj\Debug\net8.0\ref\Kampus.dll
+T:\MBKM\xtra\Kampus\Kampus\Kampus\obj\Debug\net8.0\Kampus.sourcelink.json
