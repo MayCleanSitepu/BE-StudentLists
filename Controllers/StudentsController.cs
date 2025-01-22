@@ -68,6 +68,31 @@ namespace Kampus.Controllers
             }
             return Ok(Student);
         }
+
+        [HttpPut("{StudentId}")]
+
+        public IActionResult UpdateStudent(string StudentId, UpdateStudentDto updateStudentDto)
+        {
+            var studences = dbContext.StudentDatas.Find(StudentId);
+            if (studences is null)
+            {
+                return NotFound();
+            }
+
+
+            studences.Name = updateStudentDto.Name;
+            studences.LastName = updateStudentDto.LastName;
+            studences.Bithday = updateStudentDto.Bithday;
+
+
+            dbContext.SaveChanges();
+
+            return Ok(studences);
+
+
+        }
+
+        
     }
 
 }
