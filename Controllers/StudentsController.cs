@@ -89,7 +89,22 @@ namespace Kampus.Controllers
 
             return Ok(studences);
 
+        }
 
+        [HttpDelete("{StudentId}")]
+
+        public IActionResult DeleteStudent(string StudentId)
+        {
+            var studences = dbContext.StudentDatas.Find(StudentId);
+            if (studences is null)
+            {
+                return NotFound();
+            }
+
+            dbContext.StudentDatas.Remove(studences);
+            dbContext.SaveChanges();
+
+            return Ok(new { message = "Student deleted" });
         }
 
         
